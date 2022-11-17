@@ -12,15 +12,17 @@ class Account:
 
         if amount <=0:
             return False
-        self.acct_bal += amount
-        return True
+        elif amount > 0:
+            self.acct_bal += amount
+            return True
 
     def withdraw(self, amount):
 
         if amount <= 0 or amount > self.acct_bal:
             return False
-        self.acct_bal -= amount
-        return True
+        elif amount > 0:
+            self.acct_bal -= amount
+            return True
 
 
     def get_balance(self):
